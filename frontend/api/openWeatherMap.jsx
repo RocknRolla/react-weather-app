@@ -10,8 +10,8 @@ let getTemp = function (location) {
             throw new Error(response.data.message);
         }
         return response.data.main.temp;
-    }).catch((error) => {
-        throw new Error(error.data.message);
+    }).catch((err) => {
+        throw new Error('Unable to fetch weather for that location.');
     });
 };
 
